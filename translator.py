@@ -9,8 +9,8 @@ import keyboard
 import requests
 from translate import Translator
  
-TOKEN = "6085093522:AAFXD1VJYDDs1Cq3x8LAwFIOsmMgTssLqV4"
-chat_id = "635258639"
+TOKEN = "TOKEN"
+chat_id = "chat_id"
 translator= Translator(to_lang="Russian")
 
 def translator_translate(word):
@@ -19,24 +19,7 @@ def translator_translate(word):
 def write(name):
     pyperclip.copy(name) #Копирует в буфер обмена информацию
     pyperclip.paste()
-
-#Вызываем функцию записи в буфер обмена
-
-def initPoints():
-    points = []
-    f = open('members.csv')
-    points = f.read().splitlines()
-    f.close()
-    print(points)
-    for p in points:
-        
-
-        write(p)
-
-        pyautogui.hotkey('ctrl','v')
-        
-        
-       
+           
 while True:
     if keyboard.is_pressed("z"):
         pyautogui.hotkey('ctrl','c')
